@@ -4,7 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        """
+        """time limit exceeded
         n=len(nums)
         arr=nums
         freq=[0]*100000000
@@ -24,5 +24,7 @@ class Solution(object):
             return True
         else:
             return False
-        """
+        """ 
+        #python inbuilt datastructure
+        
         return True if len(set(nums)) < len(nums) else False
