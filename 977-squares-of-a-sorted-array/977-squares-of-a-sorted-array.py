@@ -1,14 +1,8 @@
-class Solution(object):
-    def sortedSquares(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
-        n=len(nums)
-        a=[]
-        for i in range(n):
-            a.append(nums[i]*nums[i])
-        
-        sorted_array=sorted(a)
-        return sorted_array
-            
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        l=[]
+        for i in range(len(nums)):
+            l.append(nums[i]**2)
+            #print(l)
+        l.sort()
+        return l
