@@ -19,7 +19,7 @@ class Solution:
                 return True
             elif(target<matrix[i][j]):
                 j=j-1
-            elif(target>matrix[i][j]):
+            else:
                 i+=1
         return False
 
