@@ -1,13 +1,8 @@
-from itertools import combinations
-class Solution(object):
-    def subsets(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
-        res = []
-        for i in range(1, len(nums)+1):
-            temp = list(combinations(nums, i))
-            res.extend(list(x) for x in temp)
-        res.append([])
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        def getSubset(i):
+            return [[], [i]]
+        res = getSubset(nums[0])
+        for n in nums[1:]:
+            res = [i + j for i in res for j in getSubset(n)]
         return res
