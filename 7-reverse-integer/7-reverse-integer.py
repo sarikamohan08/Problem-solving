@@ -1,19 +1,16 @@
-class Solution(object):
-    def reverse(self, x):
-        """
-        :type x: int
-        :rtype: int
-        """
-        a = 1
-        if x < 0:
-            a = -1
-            x = abs(x)
-        s = 0
-        while x:
-            s *= 10
-            s += x%10
-            x //= 10
-        s = a*s
-        if s < -2**31 or s>2**31-1:
+class Solution:
+    def reverse(self, x: int) -> int:
+        rev, isPositive = 0, x > 0  # check if x is positive, make it positive it is not
+        if not isPositive: x = -1 * x
+        #rev=0
+        while(x!=0):
+            y=x%10
+            rev=rev*10+y
+            x=x//10
+            
+        if rev >= 2**31:    # check condition
             return 0
-        return s
+        
+        return rev if isPositive else -1 * rev
+            
+            
