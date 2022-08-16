@@ -12,5 +12,3 @@ class Solution:
             return 0
         
         return rev if isPositive else -1 * rev
-            
-            
