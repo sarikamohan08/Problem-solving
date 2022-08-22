@@ -7,9 +7,12 @@ class Solution:
         if(n==1):
             return True
         reach=nums[0]
-        for i in range(n):
+        for i in range(1,n):
             if(i>reach):
+                print(i)
                 return False
+            
+            print(i)
             reach=max(reach,i+nums[i])
         return True
         
