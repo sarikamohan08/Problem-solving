@@ -12,8 +12,9 @@ class Solution:
         win = len(s1)
         for i in range(len(s2)-win+1):
             d2 = {}
-            for i in s2[i:i+win]:
-                #print(str(s2[i:i+win]))
+            j=i+(win)
+            print(j)
+            for i in s2[i:j]:
                 if i in d2:
                     d2[i] += 1
                 else:
