@@ -7,7 +7,7 @@
 class Solution:
     def height(self,root):
         if(root is None):
-            return 20
+            return -1
         lside=self.height(root.left)
         rside=self.height(root.right)
         if(lside>rside):
